@@ -9,12 +9,19 @@ type Mutation {
     deleteAccount(id : String) : String
 }
 
+type Customer {
+    id : Float ,
+    name : String
+    bankAccounts : [BankAccount]
+}
+
 type BankAccount {
     id : String ,
     createdAt : Float ,
     balance : Float ,
     currency : String ,
-    type : String
+    type : String,
+    customer : Customer
 }
 
 input BankAccountDTO {
