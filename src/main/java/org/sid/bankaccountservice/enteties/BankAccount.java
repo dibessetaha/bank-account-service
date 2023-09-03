@@ -1,14 +1,12 @@
 package org.sid.bankaccountservice.enteties;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.sid.bankaccountservice.enums.AccountType;
+import org.springframework.jmx.export.annotation.ManagedNotifications;
 
 import java.util.Date;
 
@@ -27,4 +25,6 @@ public class BankAccount {
 
     @Enumerated(EnumType.STRING)
     private AccountType type ;
+    @ManyToOne
+    private Customer customer ;
 }
