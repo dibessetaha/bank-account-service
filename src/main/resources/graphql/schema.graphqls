@@ -12,7 +12,7 @@ type Mutation {
 type Customer {
     id : Float ,
     name : String
-    bankAccounts : [BankAccount]
+    accounts : [BankAccount]
 }
 
 type BankAccount {

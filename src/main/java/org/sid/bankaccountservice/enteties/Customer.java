@@ -15,5 +15,5 @@ public class Customer {
     private Long id ;
     private String name  ;
     @OneToMany(mappedBy = "customer")
-    private List<BankAccount> banlAccountList ;
+    private List<BankAccount> accounts ;
 }
